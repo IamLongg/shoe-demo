@@ -1,0 +1,16 @@
+.service {
+  @include grid(30rem);
+  .box {
+    text-align: center;
+    padding: 2rem;
+    i {
+      color: $red;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      @include graphText(1.8rem);
+      text-transform: capitalize;
+    }
+  }
+}

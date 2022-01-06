@@ -1,0 +1,31 @@
+.products {
+  .slide {
+    text-align: center;
+    img {
+      height: 25rem;
+      margin: 5rem auto;
+      transform: scale(0.6);
+    }
+    h3 {
+      padding: 1rem 0;
+      @include title(2.5rem);
+      color: $red;
+      opacity: 0;
+    }
+    .btn {
+      opacity: 0;
+    }
+  }
+
+  .swiper-slide-active {
+    img {
+      transform: scale(1);
+      transition: 0.25s linear;
+    }
+    h3,
+    .btn {
+      opacity: 1;
+      transition: 0.25s linear;
+    }
+  }
+}

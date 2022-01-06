@@ -1,0 +1,25 @@
+.banner {
+  @include flex(center);
+  flex-wrap: wrap-reverse;
+  .content {
+    flex: 1 1 41rem;
+    span {
+      font-size: 2.5rem;
+      color: $red;
+    }
+    h3 {
+      @include title(4rem);
+      padding-top: 1rem;
+    }
+    p {
+      @include graphText(1.5rem);
+    }
+  }
+  .image {
+    flex: 1 1 41rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

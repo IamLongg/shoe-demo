@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #ed2d34;
+  border-radius: 0.5rem;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: #ed2d34;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  z-index: 101;
+  transition: all 0.25s linear;
+}
+#menu-btn.fa-times {
+  top: 2rem;
+  left: 25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  margin-top: 1rem;
+  border: 0.2rem solid #444;
+  border-radius: 20rem;
+  background: none;
+  color: #444;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+.btn:hover {
+  border-color: #ed2d34;
+  color: #fff;
+  background: #ed2d34;
+  transition: 0.25s linear;
+}
+
+.heading {
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading span {
+  color: #ed2d34;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+@media screen and (max-width: 1200px) {
+  header.active {
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+}
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  banner .content {
+    font-size: 2.5rem;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  background: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: -30rem;
+  width: 30rem;
+  height: 100%;
+  background: #ed2d34;
+  padding: 2rem;
+  z-index: 100;
+}
+.header.active {
+  left: 0;
+  transition: all 0.25s linear;
+}
+.header-logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+.header-navbar {
+  padding: 30% 0;
+}
+.header-navbar a {
+  display: block;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #fff;
+}
+.header-navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+}
+.header-share {
+  text-align: center;
+}
+.header-share a {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: #444;
+  background: #fff;
+  margin: 0 0.3rem;
+  font-size: 2rem;
+}
+.header-share a:hover {
+  color: #fff;
+  background: #444;
+  transition: all 0.25s linear;
+}
+.header-credit {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  flex-wrap: wrap-reverse;
+}
+.banner .content {
+  flex: 1 1 41rem;
+}
+.banner .content span {
+  font-size: 2.5rem;
+  color: #ed2d34;
+}
+.banner .content h3 {
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+.banner .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.banner .image {
+  flex: 1 1 41rem;
+}
+.banner .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.products .slide {
+  text-align: center;
+}
+.products .slide img {
+  height: 25rem;
+  margin: 5rem auto;
+  transform: scale(0.6);
+}
+.products .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+  color: #ed2d34;
+  opacity: 0;
+}
+.products .slide .btn {
+  opacity: 0;
+}
+.products .swiper-slide-active img {
+  transform: scale(1);
+  transition: 0.25s linear;
+}
+.products .swiper-slide-active h3,
+.products .swiper-slide-active .btn {
+  opacity: 1;
+  transition: 0.25s linear;
+}
+
+.products-preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  display: none;
+}
+.products-preview-container .product-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  background: #fff;
+  padding: 10%;
+  display: none;
+}
+.products-preview-container .product-preview .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #666;
+  cursor: pointer;
+}
+.products-preview-container .product-preview .fa-times:hover {
+  color: #ed2d34;
+  transform: rotate(90deg);
+  transition: 0.25s linear;
+}
+.products-preview-container .product-preview .image {
+  flex: 1 1 40rem;
+}
+.products-preview-container .product-preview .image img {
+  width: 100%;
+}
+.products-preview-container .product-preview .content {
+  flex: 1 1 40rem;
+}
+.products-preview-container .product-preview .content h3 {
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+}
+.products-preview-container .product-preview .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.products-preview-container .product-preview .content .stars {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+.products-preview-container .product-preview .content .stars i {
+  color: #ed2d34;
+}
+.products-preview-container .product-preview .content .stars span {
+  color: #666;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.service .box {
+  text-align: center;
+  padding: 2rem;
+}
+.service .box i {
+  color: #ed2d34;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.service .box p {
+  font-size: 1.8rem;
+  color: #666;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+.reviews .slide {
+  padding: 2rem;
+  text-align: center;
+}
+.reviews .slide i {
+  font-size: 4rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.reviews .slide p {
+  font-size: 1.8rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.reviews .slide img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+.reviews .slide h3 {
+  font-size: 2rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.contact .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.contact .row form {
+  flex: 1 1 40rem;
+}
+.contact .row form .box {
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 0.2rem solid #444;
+  outline: none;
+  width: 100%;
+  text-transform: capitalize;
+}
+.contact .row form .box:focus {
+  border-color: #ed2d34;
+}
+.contact .row form .submit {
+  margin-top: 3rem;
+}
+.contact .row form textarea {
+  width: 100%;
+  height: 15rem;
+  outline: none;
+  resize: none;
+  font-size: 1.4rem;
+  border-bottom: 0.2rem solid #444;
+  text-transform: capitalize;
+}
+.contact .row form textarea:focus {
+  border-color: #ed2d34;
+}
+.contact .row .contact-info {
+  flex: 1 1 40rem;
+}
+.contact .row .contact-info h3 {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  color: #444;
+  text-transform: capitalize;
+}
+.contact .row .contact-info .graph {
+  font-size: 1.4rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.contact .row .contact-info .icons {
+  display: flex;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+.contact .row .contact-info .icons i {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background-color: #ed2d34;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.contact .row .contact-info .icons p {
+  font-size: 1.4rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.contact .row .contact-info .share {
+  padding-top: 2rem;
+}
+.contact .row .contact-info .share a {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #666;
+  margin-right: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.2rem solid #666;
+}
+.contact .row .contact-info .share a:hover {
+  background-color: #ed2d34;
+  color: #fff;
+  transition: 0.25s linear;
+}
+
+/*# sourceMappingURL=app.css.map */

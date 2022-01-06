@@ -1,0 +1,99 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 0.5rem;
+  }
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: $red;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: $white;
+  text-align: center;
+  border-radius: 0.5rem;
+  z-index: 101;
+  &.fa-times {
+    top: 2rem;
+    left: 25rem;
+  }
+  transition: all 0.25s linear;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  margin-top: 1rem;
+  border: $border;
+  border-radius: 20rem;
+  background: none;
+  color: $black;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  &:hover {
+    border-color: $red;
+    color: $white;
+    background: $red;
+    transition: 0.25s linear;
+  }
+}
+
+.heading {
+  @include title(4rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  span {
+    color: $red;
+  }
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+@include maxWidth(1200px) {
+  header.active {
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+}
+
+@include maxWidth(991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@include maxWidth(450px) {
+  html {
+    font-size: 50%;
+  }
+  banner .content {
+    font-size: 2.5rem;
+  }
+}

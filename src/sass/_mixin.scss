@@ -1,0 +1,33 @@
+@mixin maxWidth($q) {
+  @media screen and (max-width: $q) {
+    @content;
+  }
+}
+
+@mixin minWidth($q) {
+  @media screen and (min-width: $q) {
+    @content;
+  }
+}
+
+@mixin grid($value) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+  gap: 2rem;
+}
+@mixin flex($align) {
+  display: flex;
+  align-items: $align;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+@mixin title($titleSize) {
+  font-size: $titleSize;
+  color: $black;
+  text-transform: capitalize;
+}
+@mixin graphText($graphText) {
+  font-size: $graphText;
+  color: $light-color;
+  padding: 1rem 0;
+}
